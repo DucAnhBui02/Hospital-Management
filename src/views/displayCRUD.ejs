@@ -16,12 +16,13 @@
 </head>
 
 <body>
-    <table>
+    <table style="width: 100%;">
         <tr>
             <th>Email</th>
             <th>Firstname</th>
             <th>Lastname</th>
             <th>Address</th>
+            <th>Action</th>
         </tr>
         <% for(let i=0; i<dataTable.length; i++) { %>
             <tr>
@@ -39,6 +40,11 @@
 
                 <td>
                     <%= dataTable[i].address %>
+                </td>
+                <td>
+                    <a href="/edit-crud?id=<%= dataTable[i].id %>" type="button">Edit</a>
+                    <a href="">Detele</a>
+
                 </td>
             </tr>
             <% } %>
